@@ -28,10 +28,6 @@ SCDF-Net/
 ├── models/
 │   ├── dme_net_random.py       # DME-Net (degradation model estimation, Stage 1)
 │   └── sffo_net.py             # SCDF-Net (SFFO_NET_DC, Stage 2)
-├── data/                       # Datasets (not included)
-├── checkpoints/                # Model checkpoints (not included)
-├── results/                    # Output results (not included)
-├── requirements.txt
 └── README.md
 ```
 
@@ -72,11 +68,6 @@ data/
 └── SRF/
     └── landsat.xls
 ```
-
-- Each `<dataset>/` folder should contain the reference HR-HSI (`.mat` for PaviaU / Houston18 / WADC, `.tif` for Chikusei).
-- Each `wavelength/<dataset>.txt` file contains comma-separated wavelengths in nanometers.
-- `SRF/landsat.xls` provides the spectral response function used to simulate the HR-MSI.
-
 Official dataset sources:
 
 - **Pavia University**: https://www.ehu.eus/ccwintco/index.php/Hyperspectral_Remote_Sensing_Scenes
@@ -84,7 +75,10 @@ Official dataset sources:
 - **Washington DC Mall**: https://engineering.purdue.edu/~biehl/MultiSpec/hyperspectral.html
 - **Chikusei**: https://naotoyokoya.com/Download.html
 
----
+- Each `<dataset>/` folder should contain the reference HR-HSI.
+- Each `wavelength/<dataset>.txt` file contains comma-separated wavelengths in nanometers.
+- `SRF/landsat.xls` provides the spectral response function used to simulate the HR-MSI.
+
 
 ## Training
 
@@ -122,10 +116,6 @@ python train.py \
     --num_epochs_second_stage 10000 \
     --lr_stage2 1e-4 \
     --batch_size 1 \
-    --mixed_scales 2.0 \
-    --eval_scale 2.0 \
-    --sc_w 0.02 --spec_w 0.015 --sam_hsi_w 0.01 \
-    --freq_w 0.01 --freq_keep 0.15 \
     --device cuda
 ```
 

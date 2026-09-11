@@ -178,21 +178,6 @@ Parameter count: **≈3.1M**. Inference time: **≈0.0071 s** per image on an RT
 
 ---
 
-## Citation
-
-If you find this code useful in your research, please cite:
-
-```bibtex
-@article{tang2025scdfnet,
-  title   = {Unsupervised Scale-Conditioned Hyperspectral and Multispectral Image Fusion via a Frequency-Spatial Dual-Domain Network},
-  author  = {Tang, Peng and Zheng, Ke and Li, Jiaxin and Yu, Haoyang and Sun, Xu},
-  journal = {Remote Sensing},
-  year    = {2025}
-}
-```
-
----
-
 
 ## License
 

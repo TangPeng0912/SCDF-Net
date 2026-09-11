@@ -28,6 +28,7 @@ SCDF-Net/
 ├── models/
 │   ├── dme_net_random.py       # DME-Net (degradation model estimation, Stage 1)
 │   └── sffo_net.py             # SCDF-Net (SFFO_NET_DC, Stage 2)
+├── data/
 └── README.md
 ```
 
